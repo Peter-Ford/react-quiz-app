@@ -1,7 +1,7 @@
 export const questions = [
     {
         key: 0,
-        text: "What is 4 + 4",
+        text: "What is 4 + 4?",
         answers: [
             {
                 answer: 8,
