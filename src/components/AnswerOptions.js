@@ -30,6 +30,9 @@ export class AnswerOptions extends Component {
 
 AnswerOptions.propTypes = {
     answerOptions: PropTypes.array.isRequired,
-    // correctAnswer: PropTypes.oneOf(['number', 'string']).isRequired,
+    correctAnswer: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
+    ]).isRequired,
     onClick: PropTypes.func.isRequired
 };

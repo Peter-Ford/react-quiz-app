@@ -1,14 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export class QuizIntro extends Component {
-    render() {
-        return (
-            <div className="quiz-intro">
-                <h1>{this.props.message}</h1>
-                <button className="button" onClick={this.props.onClick}><span>Start</span></button>
-            </div>
-        );
-    }
-}
+export const QuizIntro = (props) => {
+    return (
+        <div className="quiz-intro">
+            <h1>{props.message}</h1>
+            <button className="button" onClick={props.onClick}><span>Start</span></button>
+        </div>
+    );
+};
 
 QuizIntro.propTypes = {};

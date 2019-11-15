@@ -1,11 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PropTypes from "prop-types";
 
-export class Results extends Component {
-    render() {
-        return <h2 className={this.props.className}>{this.props.message}</h2>
-    }
-}
+export const Results = (props) => {
+    return <h2 className={props.className}>{props.message}</h2>
+};
 
 Results.propTypes = {
     className: PropTypes.string.isRequired,
