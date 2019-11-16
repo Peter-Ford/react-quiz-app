@@ -19,8 +19,12 @@ export class AnswerOptions extends Component {
             <ul className="answer-list">
                 {answerOptions.map((answer, index) => (
                     <li key={index} className="answer-list__item">
-                        <button className=" button" onClick={this.onClick}
-                                value={answer.answer}><span>{answer.answer}</span></button>
+                        <button
+                            className="button"
+                            onClick={this.onClick}
+                            value={answer.answer}>
+                            {answer.answer}
+                        </button>
                     </li>
                 ))}
             </ul>

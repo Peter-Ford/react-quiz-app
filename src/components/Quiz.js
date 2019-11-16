@@ -86,7 +86,7 @@ export class Quiz extends Component {
         if (!this.state.quizActive) {
             return <QuizIntro message="Hello! Click 'Start' to begin the Quiz" onClick={this.introHandler}/>
         } else {
-          return (question) ? this.getQuiz(question) : this.getResults();
+            return (question) ? this.getQuiz(question) : this.getResults();
         }
     }
 }

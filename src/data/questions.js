@@ -55,5 +55,100 @@ export const questions = [
             }
         ],
         correctAnswer: "London"
+    },
+    {
+        key: 3,
+        text: "How many corners does a square have?",
+        answers: [
+            {
+                answer: 4
+            },
+            {
+                answer: 3
+            },
+            {
+                answer: 2
+            },
+            {
+                answer: 10
+            }
+        ],
+        correctAnswer: 4
+    },
+    {
+        key: 4,
+        text: "Who wrote the Harry Potter book series",
+        answers: [
+            {
+                answer: "Ron Weasley"
+            },
+            {
+                answer: "Tom Riddle"
+            },
+            {
+                answer: "Jane Austen"
+            },
+            {
+                answer: "J. K. Rowling"
+            }
+        ],
+        correctAnswer: "J. K. Rowling"
+    },
+    {
+        key: 5,
+        text: "Who was Agnes Gonxha Bojaxhiu better known as?",
+        answers: [
+            {
+                answer: "Mother Theresa"
+            },
+            {
+                answer: "Queen Elizabeth II"
+            },
+            {
+                answer: "Joan of Arc"
+            },
+            {
+                answer: "Beyoncé"
+            }
+        ],
+        correctAnswer: "Mother Theresa"
+    },
+    {
+        key: 6,
+        text: "How many films did Pierce Brosnan play James Bond?",
+        answers: [
+            {
+                answer: 2
+            },
+            {
+                answer: 10
+            },
+            {
+                answer: 3
+            },
+            {
+                answer: 4
+            }
+        ],
+        correctAnswer: 4
+    },
+    {
+        key: 7,
+        text: "What country has the highest population?",
+        answers: [
+            {
+                answer: "Canada"
+            },
+            {
+                answer: "Russia"
+            },
+            {
+                answer: "India"
+            },
+            {
+                answer: "China"
+            }
+        ],
+        correctAnswer: "China"
     }
 ];
