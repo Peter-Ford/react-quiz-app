@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
+import {questions} from '../data/questions';
 import {QuizIntro} from './QuizIntro';
 import {Question} from './Question';
 import {AnswerOptions} from './AnswerOptions';
 import {Results} from './Results';
 import {ProgressBar} from './ProgressBar';
-import {questions} from '../data/questions';
 
 export class Quiz extends Component {
     constructor(props) {
         super(props);
         this.introHandler = this.introHandler.bind(this);
         this.answerHandler = this.answerHandler.bind(this);
+        this.resetHandler = this.resetHandler.bind(this);
         this.state = {
             quizActive: false,
             activeQuestion: 0,
@@ -32,6 +33,13 @@ export class Quiz extends Component {
         }
 
         this.setState({activeQuestion: this.state.activeQuestion + 1});
+    }
+
+    resetHandler() {
+        this.setState({
+            activeQuestion: 0,
+            correctAnswers: 0
+        });
     }
 
     getQuiz(question) {
@@ -56,10 +64,14 @@ export class Quiz extends Component {
         if (this.state.correctAnswers === 0) {
             resultMessage = "Oh no! You scored 0, better luck next time";
         }
+
         return (
             <div>
-                <Results message={resultMessage}
-                         className={this.state.correctAnswers > 0 ? "result-message" : "result-message result-message--fail"}/>
+                <Results
+                    message={resultMessage}
+                    className={this.state.correctAnswers > 0 ? "result-message" : "result-message result-message--fail"}
+                    onClick={this.resetHandler}
+                />
                 <ProgressBar
                     message="Quiz Complete!"
                     currentQuestion={this.state.activeQuestion}
@@ -68,18 +80,13 @@ export class Quiz extends Component {
         )
     }
 
-
     render() {
         const question = questions[this.state.activeQuestion];
 
         if (!this.state.quizActive) {
             return <QuizIntro message="Hello! Click 'Start' to begin the Quiz" onClick={this.introHandler}/>
         } else {
-            if (question) {
-                return this.getQuiz(question);
-            } else {
-                return this.getResults();
-            }
+          return (question) ? this.getQuiz(question) : this.getResults();
         }
     }
 }
